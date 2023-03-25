@@ -1,0 +1,18 @@
+from passlib.context import CryptContext
+
+
+
+
+pwd_context = CryptContext(schemes=['bcrypt'],deprecated='auto')
+
+
+
+def hash(password :str):
+    return pwd_context.hash(password)
+
+
+#RESPONCE FROM HASED PASSWORD DB
+            #user attempt   comes from db
+def verify(plain_password,hased_password):
+    return pwd_context.verify(plain_password,hased_password)
+
