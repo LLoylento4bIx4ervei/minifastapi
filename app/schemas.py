@@ -29,7 +29,7 @@ class BasePost(BaseModel):
     post:str
 
 
-    
+
     class Config():
         orm_mode = True
 
